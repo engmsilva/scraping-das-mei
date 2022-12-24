@@ -1,13 +1,13 @@
 # Scraping DAS MEI
-Scraping DAS MEI é um aplicativo usa técnica de scraping do módulo [puppeteer](https://github.com/puppeteer/puppeteer/tree/main) para fazer raspagem no site [Receita Federal](http://www8.receita.fazenda.gov.br/SimplesNacional/Aplicacoes/ATSPO/pgmei.app/Identificacao) do Documento de Arrecadação do Simples Nacional MEI.
+**Scraping DAS MEI** é um aplicativo que usa técnica de scraping do módulo [puppeteer](https://github.com/puppeteer/puppeteer/tree/main) para fazer raspagem no site [Receita Federal](http://www8.receita.fazenda.gov.br/SimplesNacional/Aplicacoes/ATSPO/pgmei.app/Identificacao) do *Documento de Arrecadação do Simples Nacional MEI*.
 
 ## Modo de Raspagem
 
-O aplicativo possui dois modos de interação para fazer a raspagem dos dados, modo interativo e o modo background.
+O aplicativo possui dois modos de interação para fazer a raspagem dos dados, *modo interativo* e o *modo background*.
 
-No modo interativo uma página da web é aberta no Google Chrome e todos os passos da raspagem até o download do Documento de Arrecadação do Simples Nacional MEI podem serem acompanhadas visualmente.
+No **modo interativo** uma página da web é aberta no Google Chrome e todos os passos da raspagem até o download do Documento de Arrecadação do Simples Nacional MEI podem serem acompanhadas visualmente.
 
-No modo background todas as etapas de raspagem do modo interativo são executadas, mas sem abrir a página do navegador. A interação é feita através do acesso direto as API's do Google Chrome. No modo background existem etapas adicional ao modo interativo. Após fazer o download do Documento de Arrecadação do Simples Nacional MEI, este aquivo é aberto para leitura do código de barra para extração do código digitável. Após a extração do código digitável é adicionado o DAC (Dígito de Auto-Conferência) do módulo 11 da [Febraban](https://cmsarquivos.febraban.org.br/Arquivos/documentos/PDF/Layout%20-%20C%C3%B3digo%20de%20Barras%20ATUALIZADO.pdf). No final do processo o código digitável é impresso no console do terminal.
+No **modo background** todas as etapas de raspagem do modo interativo são executadas, mas sem abrir a página do navegador. A interação é feita através do acesso direto as API's do Google Chrome. No modo background existem etapas adicional ao modo interativo. Após fazer o download do Documento de Arrecadação do Simples Nacional MEI, este aquivo é aberto para leitura do código de barra para extração do código digitável. Após a extração do código digitável é adicionado o DAC (Dígito de Auto-Conferência) do módulo 11 da [Febraban](https://cmsarquivos.febraban.org.br/Arquivos/documentos/PDF/Layout%20-%20C%C3%B3digo%20de%20Barras%20ATUALIZADO.pdf). No final do processo o código digitável é impresso no console do terminal.
 
 ## Etapas Anterior a Raspagem
 
@@ -17,18 +17,18 @@ Para acelerar a raspagem é usado também o plugins *puppeteer-extra-plugin-adbl
 
 ## Etapas da Raspagem
 
-Etapa 1 - Abrir o site da Receita Federal  
-Etapa 2 - Preencher o campo CNPJ  
-Etapa 3 - Selecione e clique no menu "Emitir Guia de Pagamento (DAS)"  
-Fase 4 - Selecione o ano caledário  
-Fase 5 - Selecione o mês caledário  
-Etapa 6 - Selecione e clique no botão "Imprimir/Visualizar PDF"  
+**Etapa 1** - Abrir o site da Receita Federal  
+**Etapa 2** - Preencher o campo CNPJ  
+**Etapa 3** - Selecione e clique no menu "Emitir Guia de Pagamento (DAS)"  
+**Fase 4** - Selecione o ano caledário  
+**Fase 5** - Selecione o mês caledário  
+**Etapa 6** - Selecione e clique no botão "Imprimir/Visualizar PDF"  
 
 ### Etapa Adicional no Modo Background
 
-Etapa 7 - Extrai o código digitável do código de barra do arquivo PDF do Documento de Arrecadação do Simples Nacional MEI.  
-Etapa 8 - Adiciona ao código digitável o DAC (Dígito de Auto-Conferência) módulo 11 da Febraban.  
-Etapa 9 - Exibe no console do terminal o o código digitável.  
+**Etapa 7** - Extrai o código digitável do código de barra do arquivo PDF do Documento de Arrecadação do Simples Nacional MEI.  
+**Etapa 8** - Adiciona ao código digitável o DAC (Dígito de Auto-Conferência) módulo 11 da Febraban.  
+**Etapa 9** - Exibe no console do terminal o o código digitável.  
 
 ## Instalação e Execução
 

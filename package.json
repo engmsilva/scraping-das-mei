@@ -1,0 +1,37 @@
+{
+  "name": "scraping-das-mei",
+  "version": "1.0.0",
+  "description": "Raspagem do Documento de Arrecadação do Simples Nacional MEI",
+  "exports": "./bin/index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=14.16"
+  },
+  "scripts": {
+    "start": "node ./bin/index.js"
+  },
+  "keywords": [
+    "puppeteer",
+    "quagga",
+    "pdfjs-dist",
+    "scraping",
+    "barcode",
+    "boleto",
+    "MEI"
+  ],
+  "author": "Marcelo Ribeiro da Silva (eng.msilva@yahoo.com.br)",
+  "license": "Apache License Version 2.0",
+  "bin": {
+    "scraping-das-mei": "./bin/index.js"
+  },
+  "dependencies": {
+    "inquirer": "^9.1.4",
+    "pdf-barcode": "^1.2.3",
+    "prompt-sync": "^4.2.0",
+    "puppeteer": "^19.2.2",
+    "puppeteer-extra": "^3.3.4",
+    "puppeteer-extra-plugin-adblocker": "^2.13.5",
+    "puppeteer-extra-plugin-stealth": "^2.11.1",
+    "puppeteer-utilz": "^4.0.8"
+  }
+}

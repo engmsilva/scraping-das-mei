@@ -105,3 +105,4 @@ dist
 
 # files
 .pdf
+bin/*.pdf

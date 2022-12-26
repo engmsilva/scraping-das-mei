@@ -1,5 +1,5 @@
 # Scraping DAS MEI
-**Scraping DAS MEI** é um aplicativo que usa técnica de scraping do módulo [puppeteer](https://github.com/puppeteer/puppeteer/tree/main) para fazer raspagem no site [Receita Federal](http://www8.receita.fazenda.gov.br/SimplesNacional/Aplicacoes/ATSPO/pgmei.app/Identificacao) do *Documento de Arrecadação do Simples Nacional MEI*.
+**Scraping DAS MEI** é um aplicativo de linha de comando em *Node* que usa técnica de scraping do módulo [puppeteer](https://github.com/puppeteer/puppeteer/tree/main) para fazer raspagem no site [Receita Federal](http://www8.receita.fazenda.gov.br/SimplesNacional/Aplicacoes/ATSPO/pgmei.app/Identificacao) do *Documento de Arrecadação do Simples Nacional MEI*.
 
 ## Modo de Raspagem
 
@@ -50,7 +50,7 @@ Este aplicativo usa o módulo [pdf-barcode](https://github.com/rexshijaku/PDFBar
 
 Foi aberto um [Pull Request](https://github.com/rexshijaku/PDFBarcodeJS/pull/6) para corrigir as mensagens de aviso para o módulo *pdf-barcode*. Porém a correção pode ser feita manual consultando as alterações feitas neste *PR*.
 
-No caso do módulo *quagga* ele lança mensagem no console com informações do processamento executado. [Foi aberto um chamado](https://github.com/rexshijaku/PDFBarcodeJS/pull/6) para verificar a possibilidade das mensagens serem desabilitada via parâmetro. Porém esta alteração pode ser feita consultando as informações do chamado.
+No caso do módulo *quagga* ele lança mensagem no console com informações do processamento executado. [Foi aberto um chamado](https://github.com/serratus/quaggaJS/issues/491) para verificar a possibilidade das mensagens serem desabilitada via parâmetro. Porém esta alteração pode ser feita consultando as informações do chamado.
 
 Nenhuma destas mensagens no console do terminal interfere na execução do aplicativo.
 

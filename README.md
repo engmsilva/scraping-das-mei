@@ -38,10 +38,10 @@ $ cd scraping-das-mei
 $ npm install
 $ npm start
 
-# Escolha qual o modo deseja usar o aplicativo
-# Informe o CNPJ
-# Informe o ano
-# Informe o mês
+? Usar modo interativo (headless off)?
+? Informe o CNPJ:
+? Informe o ano:
+? Informe o mês:
 ```
 
 ## Considerações

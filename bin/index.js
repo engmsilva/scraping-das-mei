@@ -229,8 +229,10 @@ async function main() {
       name: 'month',
       message: 'Informe o mês:',
       validate(value) {
-        const valid = !isNaN(Number(value));
-        return valid || 'Por favor, digite um número.';
+        let valid = true;
+        if(isNaN(Number(value))) return 'Por favor, digite um número.';
+        if(value.length !== 2) return 'O mês precisa conter 2 digitos.';
+        return valid
       },
       filter(answers) {
         return answers.toString();

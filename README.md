@@ -46,13 +46,15 @@ $ npm start
 
 ## Considerações
 
-Este aplicativo usa o módulo [pdf-barcode](https://github.com/rexshijaku/PDFBarcodeJS) para poder ser executado no modo background. Este módulo tem dependências de outros dois módulos que geram mensagem no console do terminal, os módulos [pdfjs-dist](https://github.com/mozilla/pdfjs-dist) e [quagga](https://github.com/serratus/quaggaJS).
+Foi adicionado o módulo [winston](https://github.com/winstonjs/winston) para controlar o fluxo de mensagens no terminal.
+
+<s>Este aplicativo usa o módulo [pdf-barcode](https://github.com/rexshijaku/PDFBarcodeJS) para poder ser executado no modo background. Este módulo tem dependências de outros dois módulos que geram mensagem no console do terminal, os módulos [pdfjs-dist](https://github.com/mozilla/pdfjs-dist) e [quagga](https://github.com/serratus/quaggaJS).
 
 Foi aberto um [Pull Request](https://github.com/rexshijaku/PDFBarcodeJS/pull/6) para corrigir as mensagens de aviso para o módulo *pdf-barcode*. Porém a correção pode ser feita manual consultando as alterações feitas neste *PR*.
 
 No caso do módulo *quagga* ele lança mensagem no console com informações do processamento executado. [Foi aberto um chamado](https://github.com/serratus/quaggaJS/issues/491) para verificar a possibilidade das mensagens serem desabilitada via parâmetro. Porém esta alteração pode ser feita consultando as informações do chamado.
 
-Nenhuma destas mensagens no console do terminal interfere na execução do aplicativo.
+Nenhuma destas mensagens no console do terminal interfere na execução do aplicativo.<s>
 
 
 

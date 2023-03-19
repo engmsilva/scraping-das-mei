@@ -1,6 +1,6 @@
 {
   "name": "scraping-das-mei",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Raspagem do Documento de Arrecadação do Simples Nacional MEI",
   "exports": "./bin/index.js",
   "type": "module",
@@ -26,12 +26,14 @@
   },
   "dependencies": {
     "inquirer": "^9.1.4",
+    "node-fetch": "^3.3.1",
     "pdf-barcode": "^1.2.3",
     "prompt-sync": "^4.2.0",
     "puppeteer": "^19.2.2",
     "puppeteer-extra": "^3.3.4",
     "puppeteer-extra-plugin-adblocker": "^2.13.5",
     "puppeteer-extra-plugin-stealth": "^2.11.1",
-    "puppeteer-utilz": "^4.0.8"
+    "puppeteer-utilz": "^4.0.8",
+    "winston": "^3.8.2"
   }
 }

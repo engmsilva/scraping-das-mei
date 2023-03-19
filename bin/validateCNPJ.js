@@ -48,20 +48,22 @@ async function validateCNPJ(cnpj) {
     }
   }
   let digito2 = soma % 11 < 2 ? 0 : 11 - soma % 11;
-  
+
   // Checks if the calculated check digits are equal to the CNPJ digits
   if (parseInt(cnpj.charAt(12)) !== digito1 || parseInt(cnpj.charAt(13)) !== digito2) {
     return [false, 'Por favor, informe o número do CNPJ válido.'];
   }
 
- // // Checks if the CNPJ legal code is 213-5 - Empresário (Individual)
+ // Checks if the CNPJ legal code is 213-5 - Empresário (Individual)
   const url = `https://www.receitaws.com.br/v1/cnpj/${cnpj}`;
   const response = await fetch(url);
   const data = await response.json();
+
+  if(data.status === 'ERROR') return [false, 'CNPJ inválido.'];
   const natureza_juridica = data.natureza_juridica.replace(/\D/g, '');
 
  if (natureza_juridica !== '2135') {
-    return [false, 'Por favor, informe um CNPJ que pertence ao MEI.'];
+    return [false, 'Por favor, informe um CNPJ válido que pertence ao MEI.'];
   }
 
   return [true];

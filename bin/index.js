@@ -27,7 +27,7 @@ async function main() {
       type: 'input',
       name: 'cnpj',
       message: 'Informe o CNPJ:',
-      default: '34295973000117',
+      default: '63543580000183',
       async validate(value) {
         const valid = await validateCNPJ(value);
         return valid[0] || valid[1];

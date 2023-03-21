@@ -1,18 +1,10 @@
 import puppeteer from 'puppeteer-extra';
-import winston from 'winston';
 import { executablePath } from 'puppeteer';
 import StealthPlugin from 'puppeteer-extra-plugin-stealth';
 import AdblockerPlugin from 'puppeteer-extra-plugin-adblocker';
 import UserPreferencesPlugin from 'puppeteer-extra-plugin-user-preferences';
 import { readBarcodePDF } from './readBarcodePDF.js';
-
-const logger = winston.createLogger({
-  level: 'info',
-  format: winston.format.simple(),
-  transports: [
-    new winston.transports.Console()
-  ]
-});
+import { logger } from './loggers.js';
 
 // path to save the DAS tab
 const downloadPath = process.cwd() + '/bin';

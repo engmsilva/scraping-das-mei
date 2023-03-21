@@ -1,6 +1,8 @@
 # Scraping DAS MEI
 **Scraping DAS MEI** é um aplicativo de linha de comando em *Node* que usa técnica de scraping do módulo [puppeteer](https://github.com/puppeteer/puppeteer/tree/main) para fazer raspagem no site [Receita Federal](http://www8.receita.fazenda.gov.br/SimplesNacional/Aplicacoes/ATSPO/pgmei.app/Identificacao) do *Documento de Arrecadação do Simples Nacional MEI*.
 
+O aplicativo quando usado no **modo background**, pode ser habilitado para enviar o código de barra da guia de arrecadação do DAS por SMS. Para usar a função de envio de SMS é necessário ter uma conta no [Twilio](https://www.twilio.com/).
+
 ## Modo de Raspagem
 
 O aplicativo possui dois modos de interação para fazer a raspagem dos dados, *modo interativo* e o *modo background*.
@@ -43,6 +45,23 @@ $ npm start
 ? Informe o ano:
 ? Informe o mês:
 ```
+**nota:** defina o valor da variável de ambiente `DEFAULT_CNPJ_INPUT` no arquivo `.env` para carregar um número padrão para o CNPJ.
+
+## Envio do Código de Barra da Guia de Arrecadação do DAS por SMS
+
+Por padrão esta função é desabilitada. Para habilitar o envio de SMS no **modo background** é preciso definir os valores das varáveis de ambiente do arquivo `.env`.
+
+A informações abaixo podem serem encontradas no [console da sua conta no Twilio](https://console.twilio.com/).
+
+```
+TWILIO_ENABLE_SEND=true
+TWILIO_ACCOUNT_SID=<your_twilio_account_sid>
+TWILIO_AUTH_TOKEN=<your_twilio_auth_token>
+TWILIO_CELL_FROM=<your_twilio_phone_number>
+TWILIO_CELL_TO=<your_phone_registered_in_twilio>
+```
+
+
 
 ## Considerações
 

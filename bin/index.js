@@ -1,8 +1,12 @@
 #!/usr/bin/env node
 import inquirer from 'inquirer';
+import dotenv from 'dotenv';
 import { validateCNPJ } from './validateCNPJ.js';
 import { validateYear, validateMonth } from './validateDate.js';
 import { scraping } from './scraping.js';
+
+// Load environment variables from .env file
+dotenv.config();
 
 console.log = function() {};
 
@@ -27,7 +31,7 @@ async function main() {
       type: 'input',
       name: 'cnpj',
       message: 'Informe o CNPJ:',
-      default: '63543580000183',
+      default: process.env.DEFAULT_CNPJ_INPUT,
       async validate(value) {
         const valid = await validateCNPJ(value);
         return valid[0] || valid[1];
